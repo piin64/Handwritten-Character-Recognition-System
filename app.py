@@ -83,7 +83,7 @@ def load_model(model_type):
         y_pred = Activation('softmax', name='softmax')(inner)
 
         model = Model(inputs=input_data, outputs=y_pred)
-        model.load_weights('C:/Users/User/Documents/FYP project/Handwriting_Recognition_CRNN_LSTM/model file/CNN_LSTM_best.keras')
+        model.load_weights('/model file/CNN_LSTM_best.keras')
     
     else:  # CNN with 1D Convolutions
         def residual_block(x, filters, kernel_size=(3, 3)):
@@ -140,7 +140,7 @@ def load_model(model_type):
         y_pred = Activation('softmax', name='softmax')(x)
 
         model = Model(inputs=input_data, outputs=y_pred)
-        model.load_weights('C:/Users/User/Documents/FYP project/Handwriting_Recognition_CRNN_LSTM/model file/CNN_best.keras')
+        model.load_weights('/model file/CNN_best.keras')
     
     return model
 
